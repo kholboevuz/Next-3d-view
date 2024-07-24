@@ -13,15 +13,17 @@ const ModelViewerGlb = dynamic(
 )
 
 const Home: NextPage = () => {
-	const modelUrl = process.env.NEXT_PUBLIC_MODEL_URL_GLB || ''
+	const modelUrl = process.env.NEXT_PUBLIC_MODEL_URL || ''
 	return (
 		<div
 			style={{ backgroundColor: '#011C53' }}
 			className='h-screen flex justify-center items-center'
 		>
-			<ModelViewerGlb modelUrl={modelUrl} />
+			<ModelViewer modelUrl={modelUrl} />
+			{/* <ModelViewerGlb modelUrl={modelUrl} /> */}
 		</div>
 	)
 }
 
 export default Home
+
